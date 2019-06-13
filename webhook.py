@@ -31,7 +31,9 @@ def makeResponse(req):
     date = parameters.get("date")
     if city is None:
         return None
-    r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=05b1c8a94953f358da1f92011538dcef')
+          
+    r=requests.get('https://samples.openweathermap.org/data/2.5/forecast?q='+city+'&appid=b6907d289e10d714a6e88b30761fae22')
+        # 'http://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=05b1c8a94953f358da1f92011538dcef')
     json_object = r.json()
     weather=json_object['list']
     for i in range(0,30):
